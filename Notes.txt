@@ -10,3 +10,29 @@ $4.99
 499
 
 return results[100, 100, 100, 100, 25, 25, 25, 10, 10, 1, 1, 1, 1]
+
+
+ FAIL  __tests__/counter.test.js
+  ● Counter › should return array of change 
+for 100, 25, 25
+
+    ReferenceError: ChangeAmount is not defi
+ned
+
+       6 |     const changeAmount = 150;
+       7 |     const correctAnswerArray = [100, 25, 25];
+    >  8 |     const result = Counter.getChange(ChangeAmount, []);
+         |                                      ^
+       9 |     expect(result).toEqual(correctAnswerArray);
+      10 |   });
+      11 | });
+
+      at Object.<anonymous> (__tests__/counter.test.js:8:38)
+
+Test Suites: 2 failed, 2 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        3.045s
+Ran all test suites.
+npm ERR! Test failed.  See above for more de
+tails.
