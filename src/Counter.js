@@ -1,28 +1,34 @@
 export class Counter {
   construtor() {}
   //470
-  getChange(amount, result) {
-    const changeDrawer = [ 500, 100, 25, 10, 5, 1 ];
+  getChange(amount) {
+    let thisResult = [];
 
-    if (amount == 150) {
-      return [ 100, 25, 25 ];
-    }
+    const changeBot = () => {
+      if (amount >= 500) {
+        thisResult.push(500);
+        changeBot((amount -= 500));
+      } else if (amount >= 100) {
+        thisResult.push(100);
+        changeBot((amount -= 100));
+      } else if (amount >= 25) {
+        thisResult.push(25);
+        changeBot((amount -= 25));
+      } else if (amount >= 10) {
+        thisResult.push(10);
+        changeBot((amount -= 10));
+      } else if (amount >= 5) {
+        thisResult.push(10);
+        changeBot((amount -= 5));
+      } else if (amount >= 1) {
+        thisResult.push(1);
+        changeBot((amount -= 1));
+      } else if (amount >= 0) {
+        return thisResult;
+      }
+    };
 
-    // if (amount <= changeDrawer[0]) {
-    //   getChange(amount - changeDrawer[0], result.push(changeDrawer[0]));
-    // } else if (amount <= changeDrawer[1]) {
-    //   getChange(amount - changeDrawer[1], result.push(changeDrawer[1]));
-    // } else if (amount <= changeDrawer[2]) {
-    //   getChange(amount - changeDrawer[2], result.push(changeDrawer[2]));
-    // } else if (amount <= changeDrawer[3]) {
-    //   getChange(amount - changeDrawer[3], result.push(changeDrawer[3]));
-    // } else if (amount <= changeDrawer[4]) {
-    //   getChange(amount - changeDrawer[4], result.push(changeDrawer[4]));
-    // } else if (amount <= changeDrawer[5]) {
-    //   getChange(amount - changeDrawer[5], result.push(changeDrawer[5]));
-    // } else {
-    //   return result;
-    // }
-    return [];
+    changeBot();
+    return thisResult;
   }
 }

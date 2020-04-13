@@ -6,7 +6,7 @@ describe("Counter", () => {
     const counter = new Counter();
     const changeAmount = 150;
     const correctAnswerArray = [ 100, 25, 25 ];
-    const result = counter.getChange(changeAmount, []);
+    const result = counter.getChange(changeAmount);
     expect(result).toEqual(correctAnswerArray);
   });
 
@@ -14,7 +14,15 @@ describe("Counter", () => {
     const counter = new Counter();
     const changeAmount = 475;
     const correctAnswerArray = [ 100, 100, 100, 100, 25, 25, 25 ];
-    const result = counter.getChange(changeAmount, []);
+    const result = counter.getChange(changeAmount);
+    expect(result).toEqual(correctAnswerArray);
+  });
+
+  test("should return array of change for 23.36", () => {
+    const counter = new Counter();
+    const changeAmount = 2336;
+    const correctAnswerArray = [ 500, 500, 500, 500, 100, 100, 100, 25, 10, 1 ];
+    const result = counter.getChange(changeAmount);
     expect(result).toEqual(correctAnswerArray);
   });
 });
