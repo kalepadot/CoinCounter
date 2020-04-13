@@ -36,3 +36,91 @@ Time:        3.045s
 Ran all test suites.
 npm ERR! Test failed.  See above for more de
 tails.
+
+                     WHITE-BOARD 
+        ----------------------------------
+        DRAKE 666 420
+
+example: const prefixSir = addPrefix("Sir");
+
+
+function setName(userName) {
+  return function (suffix) {
+    return `${suffix} ${userName}`
+  }
+}
+
+const getName = setName("Big Smokey");
+
+getName()
+"undefined Big Smokey"
+
+getName("Sir");
+
+> "Sir Big Smokey"
+
+                     WHITE-BOARD 
+        ----------------------------------
+
+const lionSound = soundMaker("roar");
+//returns "The {Lion} goes {roar}";
+const mouseSound = soundMaker("squeak");
+
+
+
+
+function getSound("roar")  {
+  return function ("squeak")  {
+    return `${"roar"} ${"squeak"}`
+
+  }
+}
+
+const mouseSound = setSound("squeak");
+
+getSound("squeak");
+
+> "squeak"
+
+                     WHITE-BOARD 
+        ----------------------------------
+const misterJunior = nameEnhancer("Mister")("Junior");
+const duchessThird = nameEnhancer("Duchess")("The Third");
+
+returns "Mister puppet master Junior";
+ 
+ function setEnhancment(firstEnhancement) {
+   return fuction (prefix){
+      return `${firstEnhancment} Puppet Master ${secondEnhancment}`
+   }
+ }       
+ const getEnhancer = setEnhancement("puppet master);
+  getEnhancer()
+
+
+
+
+
+
+
+function(yourName) {
+  return `${salutation}! Nice to meet you, ${yourName}!`
+}
+
+        
+
+
+function setEnhancment(prefix) {
+    return function(suffix) {
+        return function (name) {
+            return `${prefix} ${name} ${suffix}`;
+        }
+    }
+}
+const fullName = setEnhancment("Sir")("Jr.")("Puppet Master")
+
+fullName
+return Sir Puppet Master
+
+
+        fak
