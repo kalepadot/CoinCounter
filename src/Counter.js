@@ -15,29 +15,9 @@ export class Counter {
           return buildChange(amount, (index += 1), result);
         }
       } else {
-        const finishedChange = result;
-        console.log("buildChange: ", finishedChange);
-        return finishedChange;
+        return result;
       }
     };
-
-    const finalResult = buildChange(startingAmount);
-    console.log("Final: ", finalResult);
-    return finalResult;
+    return buildChange(startingAmount);
   }
 }
-
-// spit ballin:
-
-// const coinTypeAmount = (coinType) => {
-//   return (amount => {
-//     return amount / coinType;
-//   }
-// }
-
-// const quarter = coinTypeAmount(25);
-// const dime = coinTypeAmount(10);
-// const nickel = coinTypeAmount(5);
-// const penny = cointTypeAmount(1);
-
-// const numberOfNickels = nickel(800);
