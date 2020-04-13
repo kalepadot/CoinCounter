@@ -1,0 +1,12 @@
+Part 1
+Create a coin counter function that uses recursion to solve the problem.
+
+Part 2
+Create a coin counter function that uses a closure that can be used with functions for each type of change (quarters, nickels, dimes and pennies).
+
+
+const change = [1,5,10,25,100,500,1000];
+$4.99
+499
+
+return results[100, 100, 100, 100, 25, 25, 25, 10, 10, 1, 1, 1, 1]
