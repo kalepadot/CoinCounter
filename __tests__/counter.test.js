@@ -21,7 +21,7 @@ describe("Counter", () => {
   test("should return array of change for 23.36", () => {
     const counter = new Counter();
     const changeAmount = 2336;
-    const correctAnswerArray = [ 500, 500, 500, 500, 100, 100, 100, 25, 10, 1 ];
+    const correctAnswerArray = [ 1000, 1000, 100, 100, 100, 25, 10, 1 ];
     const result = counter.getChange(changeAmount);
     expect(result).toEqual(correctAnswerArray);
   });

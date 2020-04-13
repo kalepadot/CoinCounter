@@ -1,6 +1,6 @@
 export class Counter {
   getChange(startingAmount) {
-    const coinValues = [ 500, 100, 25, 10, 5, 1 ];
+    const coinValues = [ 1000, 500, 100, 25, 10, 5, 1 ];
 
     const buildChange = (amount, index = 0, result = []) => {
       if (amount > 0) {
